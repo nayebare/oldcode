@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+  <!-- This is div for list of users -->
+  <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  <div class="my-3 p-3 bg-white rounded box-shadow">
+    <h6 class="border-bottom border-gray pb-2 mb-0">User Directory</h6>
+    <% for(var i=0; i < listUsers.length; i++)
+    {
+%>
+      <div class="media text-muted pt-3">
+        <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">
+            <a href="chatprivately">
+              <%= listUsers[i].username %>
+            </a>
+            <span class="label label-success">
+              <%= listUsers[i].status %>
+            </span>
+            <span class="label label-primary">
+              Onliine
+            </span>
+          </strong>
+        </p>
+      </div>
+      <% } %>
+
+  </div>
+
+  </main>
+  <% include ../partials/footer %>

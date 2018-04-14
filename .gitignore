@@ -1,0 +1,5 @@
+#This files specifies which files are to be ignored by git
+#Ignore the node modules for starters
+./node_modules/*
+
+

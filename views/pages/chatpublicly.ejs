@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+<div id="chatprivately">
+  <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  <div class="my-3 p-3 bg-white rounded box-shadow">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Recent Messages</h6>
+
+    <div class="media text-muted pt-3">
+      <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">
+          @Gilbert
+        </strong>
+        President is coming
+      </p>
+    </div>
+  </div>
+  <!--- This section will handle the broadcast-->
+  <div id="showmessages"></div>
+
+  <!-- form to post messages -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="postMessageForm" <form class="form-group" action="/messages/public" method="post">
+          <div class="form-group">
+            <input type="hidden" name="username" id="username" value="" />
+            <textarea type="text" class="form-control" id="messageArea" name="content" rows="3" placeholder="Write Message"></textarea>
+            <div class="mx-auto" style="height:10px;"></div>
+            <div class="btn-panel">
+              <button type="button" class="btn btn-primary mb-2" id="postMessage">
+                <strong>Post Public Message</strong>
+              </button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </main>
+</div>
+
+    <% include ../partials/footer %>
